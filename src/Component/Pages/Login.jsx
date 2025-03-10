@@ -1,44 +1,58 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
-import loginpic from "../../assets/login.png";
+import { useNavigate } from "react-router-dom";
+import DIAST from "../../assets/DTSETEST.png";
+import studentimage from "../../assets/student-image2.png";
 import "../../Styles/Login.css";
+import TestDetails from "./TestDetails";
 
 const Login = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     alert("Login form submitted!");
     navigate("/testschedule");
   };
+
   return (
-    <div className="login-container">
-      {/* Left Side - Image */}
-      <div className="login-left">
-        <img src={loginpic} alt="Students" className="login-image" />
+    <div>
+      <div className="login-container">
+        {/* Wrapper for Left (Images) and Right (Form) */}
+        <div className="two-main">
+          {/* Left Side - Images */}
+          <div className="left-content">
+            <div className="DIAST-image">
+              <img src={DIAST} alt="Diast" />
+            </div>
+            <div className="student-image">
+              <img src={studentimage} alt="students" />
+            </div>
+          </div>
+
+          {/* Right Side - Login Form */}
+          <div className="login-right">
+            <h2>Login to your dashboard</h2>
+            <form className="login-form" onSubmit={handleSubmit}>
+              <label>Full Name</label>
+              <input type="text" placeholder="Enter your roll number" required />
+
+              <label>Address</label>
+              <input type="text" required />
+
+              {/* <a href="/" className="forgot-link">
+              Forgot roll number/password?
+            </a> */}
+
+              <button type="submit" className="login-btn">Login</button>
+            </form>
+          </div>
+        </div>
       </div>
+      <TestDetails />
 
-      {/* Right Side - Login Form */}
-      <div className="login-right">
-        <h2>Login to your dashboard</h2>
-        <form className="login-form" onSubmit={handleSubmit}>
-          <label>Roll Number</label>
-          <input type="text" placeholder="Enter your roll number" required />
 
-          <label>Password</label>
-          <input type="date" required />
-
-          <a href="/" className="forgot-link">Forgot roll number/password?</a>
-
-          <button type="submit" className="login-btn">Login</button>
-
-          <p className="register-text">
-            Don't have an account? <Link to="/iacstexam">Register here</Link>
-          </p>
-        </form>
-      </div>
     </div>
   );
 };
 
 export default Login;
-
