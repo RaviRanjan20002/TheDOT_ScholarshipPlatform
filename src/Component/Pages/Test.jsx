@@ -173,7 +173,7 @@ const Test = () => {
 
         for (const subject of subjects) {
           const response = await axios.get(
-            `http://localhost:5000/api/questions/${subject}`
+            `https://thedot-scholarshipplatform.onrender.com/api/questions/${subject}`
           );
           questionCounts[subject] = response.data.length;
         }
@@ -226,7 +226,7 @@ const Test = () => {
 
   const handleAddSampleQuestions = async () => {
     try {
-      await axios.post("http://localhost:5000/api/questions/add-sample");
+      await axios.post("https://thedot-scholarshipplatform.onrender.com/api/questions/add-sample");
       alert("Sample questions added successfully!");
     } catch (error) {
       console.error("❌ Error adding sample questions:", error);
@@ -257,9 +257,9 @@ const Test = () => {
           Submit Test
         </button>
 
-        <button className="quiz-add-button" onClick={handleAddSampleQuestions}>
+        {/* <button className="quiz-add-button" onClick={handleAddSampleQuestions}>
           ➕ Add Sample Questions
-        </button>
+        </button> */}
       </div>
 
       {selectedSubject && (

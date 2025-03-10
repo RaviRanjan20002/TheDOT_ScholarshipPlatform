@@ -18,7 +18,7 @@ const TestPage = ({
       try {
         if (!subject) throw new Error("Subject is undefined");
         const response = await axios.get(
-          `http://localhost:5000/api/questions/${subject}`
+          `https://thedot-scholarshipplatform.onrender.com/api/questions/${subject}`
         );
         setQuestions(response.data);
       } catch (error) {
