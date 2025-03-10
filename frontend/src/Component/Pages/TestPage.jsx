@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import QuestionCard from "./QuestionCard";
-import "../../Styles/TestPage.css";
+import "../../Styles/Testpage.css";
 
 const TestPage = ({
   subject,
