@@ -2,17 +2,13 @@ import React from "react";
 import "../../Styles/TestDetails.css";
 
 // Import icons
-import { FaLaptop } from "react-icons/fa";
-import { IoIosPeople } from "react-icons/io";
-import { MdAccessTime, MdSchool } from "react-icons/md";
-import { BsCalendarEvent } from "react-icons/bs";
-import Calendar from "../../assets/cc.png";
+
 
 const TestDetails = () => {
   return (
     <div>
       {/* Test Details and Eligibility Sections */}
-      <div className="test-container">
+      <div className="test-container2">
         {/* Test Details Section */}
         <div className="test-section">
           <h2>Test details</h2>

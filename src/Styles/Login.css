@@ -1,79 +1,76 @@
 /* General Container */
 .login-container {
   display: flex;
-  height: 100vh;
+  flex-wrap: nowrap; /* Ensures items stay in a row on large screens */
+  height: 100%;
   width: 100%;
   background-color: #d1effe;
-}
-
-/* Left Section (Image + Text) */
-.login-left {
-  flex: 1.2;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #d1effe;
-  padding: 40px;
-  
+  padding: 20px;
+  gap: 20px;
 }
 
-.login-image {
+/* Wrapper for Left & Right Sections */
+.two-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
   width: 100%;
-  max-width: 550px;
-  border-radius: 8px;
-  border: 5px solid grey; /* Border Effect */
-    transition: 0.3s ease-in-out;
+  padding: 0 50px;
 }
 
-.image-text {
-  text-align: center;
-  margin-top: 20px;
+/* Left Content (DIAST + Student Image) */
+.left-content {
+  width: 50%; /* Adjusted width to take half the screen */
+  display: flex;
+  flex-direction: column; /* Stacks images vertically */
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Adds spacing between images */
 }
 
-.image-text h1 {
-  font-size: 32px;
-  font-weight: bold;
-  color: #007bff;
+/* DIAST Image */
+.DIAST-image img {
+  width: 80%; /* Makes image responsive */
+  max-width: 500px;
+  height: auto;
 }
 
-.image-text p {
-  font-size: 18px;
-  font-weight: bold;
-  color: #ff4d4d;
+/* Student Image */
+.student-image img {
+  width: 80%;
+  max-width: 500px;
+  height: auto;
 }
 
-.image-text span {
-  font-size: 16px;
-  color: #333;
-}
-
-/* Right Section (Form) */
+/* Right Section (Login Form) */
 .login-right {
-  margin: 100px;
-  flex: 0.8;
+  width: 35%;
   max-width: 400px;
-  max-height: 400px;
   background: white;
-  padding: 40px;
+  padding: 30px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   text-align: left;
-  /* margin: auto; */
 }
 
+/* Form Title */
 .login-right h2 {
   font-size: 22px;
   font-weight: bold;
   color: #333;
-  margin-bottom: 20px;
+  text-align: center;
+  margin-bottom: 15px;
 }
 
 /* Form Fields */
 .login-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
 }
 
 .login-form label {
@@ -89,30 +86,14 @@
   width: 100%;
 }
 
-/* Password Field with Icon */
-.password-field {
-  position: relative;
-}
-
-.password-field input {
-  width: 100%;
-  padding-right: 35px;
-}
-
-.calendar-icon {
-  position: absolute;
-  right: 10px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #007bff;
-}
-
 /* Forgot Password Link */
 .forgot-link {
   font-size: 14px;
   color: #007bff;
   text-decoration: none;
-  text-align: right;
+  text-align: left;
+  display: block;
+  margin-top: 5px;
 }
 
 .forgot-link:hover {
@@ -130,53 +111,80 @@
   cursor: pointer;
   border-radius: 5px;
   transition: 0.3s;
+  margin-top: 10px;
+  width: 100%;
 }
 
 .login-btn:hover {
   background-color: #0056b3;
 }
 
-/* Register Link */
-.register-text {
-  font-size: 14px;
-  text-align: center;
-}
-
-.register-text a {
-  color: #007bff;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.register-text a:hover {
-  text-decoration: underline;
-}
-
 /* RESPONSIVE DESIGN */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .login-container {
-      flex-direction: column;
-      height: auto;
-      padding: 30px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .login-left {
-      display: none; /* Hide image section on small screens */
+  .left-content {
+    width: 60%;
+  }
+
+  .DIAST-image img,
+  .student-image img {
+    width: 100%;
+    max-width: 400px;
   }
 
   .login-right {
-      width: 100%;
-      max-width: 90%;
+    width: 40%;
+  }
+}
+
+@media (max-width: 768px) {
+  .two-main {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .left-content {
+    width: 100%;
+  }
+
+  .DIAST-image img,
+  .student-image img {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .login-right {
+    width: 80%;
   }
 }
 
 @media (max-width: 500px) {
-  .login-right {
-      padding: 20px;
+  .login-container {
+    flex-direction: column;
+    padding: 10px;
   }
 
-  .login-btn {
-      font-size: 16px;
-      padding: 10px;
+  .left-content {
+    width: 100%;
+    order: 2; /* Moves the images below the form */
+  }
+
+  .login-right {
+    width: 100%;
+    max-width: 350px;
+    padding: 20px;
+    order: 1;
+  }
+
+  .DIAST-image img,
+  .student-image img {
+    width: 100%;
+    max-width: 300px;
   }
 }
