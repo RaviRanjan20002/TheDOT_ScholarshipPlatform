@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../../Styles/TestSched.css"; // Import the CSS file
+import "../../Styles/Testsched.css"; // Import the CSS file
 import { useNavigate } from "react-router-dom";
 
 const TestSched = () => {
