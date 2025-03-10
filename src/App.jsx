@@ -1,10 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Login from "./Component/Pages/Login";
 import Layout from "./Component/Section/Layout";
-import RegForm from "./Component/Pages/RegForm";
 import TestSched from "./Component/Pages/TestSched";
 import Test from "./Component/Pages/Test";
-import TestPage from "./Component/Pages/TestPage";
+// import TestPage from "./Component/Pages/TestPage";
 import Result from "./Component/Pages/Result";
 
 function App() {
@@ -13,7 +12,6 @@ function App() {
       <Routes>
       <Route path ="/" element ={<Layout/>}>
         <Route path="/" element={<Login/>}/>
-        <Route path="iacstexam" element={<RegForm/>} /> 
         <Route path="testschedule" element={<TestSched/>} /> 
         <Route path="test" element={<Test/>} />
         <Route path="/results" element={<Result/>} />
