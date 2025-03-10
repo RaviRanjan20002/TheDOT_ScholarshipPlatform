@@ -26,7 +26,7 @@ const Result = () => {
       try {
         await Promise.all(
           subjects.map(async (subject) => {
-            const response = await axios.get(`http://localhost:5000/api/questions/${subject}`);
+            const response = await axios.get(`https://thedot-scholarshipplatform-3jnq.onrender.com/api/questions/${subject}`);
             const questions = response.data;
 
             newTotalQuestions[subject] = questions.length;
