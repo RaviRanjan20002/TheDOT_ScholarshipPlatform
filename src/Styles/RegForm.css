@@ -1,0 +1,174 @@
+/* Global Styles */
+body {
+
+  margin: 0;
+  padding: 0;
+}
+.mainPart{
+  background-color: white;
+}
+
+/* Main Section */
+.main-section {
+  background-color: #d1effe;
+  padding: 10px;
+  width: 100%;
+  margin: auto;
+}
+
+/* Wrapper for Left & Right Sections */
+.two-main {
+  display: flex;
+  justify-content: space-between; /* Ensures equal spacing */
+  align-items: center;
+  max-width: 1200px; /* Adjust width as needed */
+  margin: 0 auto; /* Centers the container */
+  padding: 0 50px; /* Adds equal padding on both sides */
+  width: 100%;
+}
+
+
+/* Left Content (DIAST + Student Image) */
+.left-content {
+  padding-left: 2rem;
+  width: 70%; /* Increased space allocation */
+  display: flex;
+  flex-direction: column; /* Stacks images vertically */
+  justify-content: center;
+  align-items: center;
+  gap: 0px; /* Adds more spacing between images */
+}
+
+.DIAST-image img {
+  width: 80%; /* Increased width */
+  max-width: 500px; /* Increased max size */
+  height: auto;
+}
+
+.student-image img {
+  width: 80%;
+  max-width: 600px;
+  height: auto;
+}
+
+/* Right Form */
+.right-form {
+  font-family: "Roboto", sans-serif;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+  width: 400px;
+  text-align: center;
+}
+
+.form-container h2 {
+  color: #333333;
+  font-weight: 600;
+  padding: 10px;
+}
+
+.help-link {
+  color: #1b805e;
+  cursor: pointer;
+  font-size: 14px;
+  padding: 5px;
+}
+
+.input-box {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: border 0.3s;
+}
+
+.input-box:focus {
+  border-color: #1b805e;
+}
+
+.input-box.error {
+  border-color: rgb(146, 203, 214);
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* Verify Button */
+.verify-button {
+  width: 100%;
+  padding: 12px;
+  margin: 15px 0px;
+  background: #b5b3b3;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: not-allowed;
+  transition: background 0.3s;
+}
+
+.verify-button:hover:not(:disabled) {
+  background: #1b805e;
+}
+
+.verify-button.verified {
+  background: #1b805e;
+  cursor: default;
+}
+
+/* Footer inside form section */
+.footer {
+  background: #1b805e;
+  color: white;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  text-align: center;
+  width: 100%;
+  max-width: 400px;
+}
+
+
+/* Scholarship Banner */
+.scholarship-banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #69bcfa;
+  color: white;
+  padding: 0px 25px;
+  border-radius: 10px;
+  font-size: 2rem;
+  font-weight: 500;
+  width: 100%;
+  max-width: 1200px;
+  margin: 20px auto;
+  text-align: center;
+}
+
+.scholarship-banner p {
+  font-size: 1rem;
+  color: rgb(18, 13, 13);
+  margin: 0;
+  flex: 1;
+  font-weight: bold;
+}
+
+.calendar-image {
+  width: 100px;  /* Adjust size as needed */
+  height: auto;
+}

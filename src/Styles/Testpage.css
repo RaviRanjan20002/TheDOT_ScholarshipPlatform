@@ -1,0 +1,168 @@
+/* 📌 Main Container */
+.test-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* 🎯 Question Section */
+.question-section {
+  width: 70%;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.question-info {
+  font-size: 14px;
+  color: #666;
+  font-style: italic;
+  margin-top: 5px;
+}
+
+/* 🔥 Option Styling */
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.option-box {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  background: #f1f1f1;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 16px;
+  border: 2px solid transparent;
+}
+
+.option-box:hover {
+  background: #e0e0e0;
+}
+
+.selected {
+  background: #007bff;
+  color: white;
+  border: 2px solid #0056b3;
+}
+
+.option-letter {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+/* 🚀 Navigation Buttons */
+.navigation-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+.navigation-buttons button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.navigation-buttons button:hover {
+  background: #0056b3;
+}
+
+/* 🏆 Side Panel */
+.side-panel {
+  width: 25%;
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+/* ✅ Answered & Not Answered Boxes */
+.progress-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.progress-box {
+  padding: 10px 15px;
+  font-weight: bold;
+  border-radius: 6px;
+  font-size: 16px;
+}
+
+.answered-box {
+  background: #28a745;
+  color: white;
+}
+
+.not-answered-box {
+  background: #dc3545;
+  color: white;
+}
+
+/* 🟡 Divider Line */
+.divider {
+  margin: 15px 0;
+  border-top: 2px solid #ccc;
+}
+
+/* 🔹 Subject & Completion Info */
+.subject-progress h3 {
+  margin-bottom: 8px;
+  color: #333;
+  font-size: 18px;
+}
+
+.subject-progress p {
+  font-size: 16px;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* 🔥 Question Navigation Panel */
+.question-nav {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.question-nav button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.answered {
+  background: #28a745;
+  color: white;
+}
+
+.notAnswered {
+  background: #dc3545;
+  color: white;
+}
+
+.question-nav button:hover {
+  opacity: 0.8;
+}
+
+
+  

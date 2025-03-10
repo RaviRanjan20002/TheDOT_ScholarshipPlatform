@@ -1,0 +1,165 @@
+/* Result Page Styling */
+.result-container {
+  margin: 20px auto;
+  max-width: 600px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.result-container:hover {
+  transform: scale(1.02);
+}
+
+/* Celebration Emoji */
+.emoji {
+  font-size: 60px;
+  margin-bottom: 15px;
+}
+
+/* Headings */
+h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+h3 {
+  font-size: 22px;
+  margin-top: 15px;
+  color: #444;
+}
+
+h2 {
+  font-size: 26px;
+  color: #ff5722;
+  margin-top: 10px;
+}
+
+/* Institute Branding */
+.institute-tagline {
+  font-size: 18px;
+  font-weight: bold;
+  color: #007bff;
+  margin: 10px 0;
+}
+
+.institute-info {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+/* Score Container */
+.score-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+/* Individual Subject Score Box */
+.subject-score-box {
+  background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: 150px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subject-score-box:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Subject Icon */
+.subject-icon {
+  font-size: 30px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+/* Subject Name */
+.subject-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Score Box */
+.score-box {
+  background: #4caf50;
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 6px 10px;
+  border-radius: 6px;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+/* Percentage */
+.percentage {
+  font-weight: bold;
+  font-size: 24px;
+  color: #007bff;
+  margin-top: 10px;
+}
+
+/* Error Message */
+.error {
+  color: red;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* Animation */
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.result-container:hover .emoji {
+  animation: pop 0.8s infinite;
+}
+
+/* Scholarship Section */
+.scholarship-section {
+  margin-top: 20px;
+  padding: 15px;
+  background: #ffecb3;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #8a6d3b;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+/* Button for Admission */
+.admission-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: #ff5722;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.admission-button:hover {
+  background: #e64a19;
+}
+
+  

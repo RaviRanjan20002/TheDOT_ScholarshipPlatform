@@ -1,0 +1,122 @@
+/* 🎯 Main Container */
+.quiz-container {
+  background: #f8f9fa;  /* Light gray background */
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  margin-top: 50px;
+  position: relative; /* Needed for absolute positioning */
+}
+
+/* 🔹 Heading */
+.quiz-heading {
+  color: #333;
+  font-size: 26px;
+  margin-bottom: 15px;
+}
+
+/* 📌 Subject Selection Buttons */
+.quiz-subject-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.quiz-subject-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.quiz-subject-btn:hover {
+  background: #0056b3;
+}
+
+/* ✅ Submit Button (Moved to Top Right) */
+.quiz-submit-button {
+  background: #28a745;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: 0.3s ease;
+
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.quiz-submit-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.quiz-submit-button:hover {
+  background: #218838;
+}
+
+/* ⏳ Timer Styling */
+.quiz-timer {
+  position: absolute;
+  top: 10px;
+  left: 120px; /* Shifted left to avoid overlap with the submit button */
+  background: #dc3545; /* Red background for urgency */
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 8px 15px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.quiz-timer span {
+  font-family: "Courier New", monospace;
+}
+
+.quiz-timer::before {
+  content: "⏳"; /* Timer Icon */
+  font-size: 20px;
+}
+
+
+
+/* 📱 Responsive Design */
+@media (max-width: 768px) {
+  .quiz-container {
+    width: 90%;
+  }
+
+  .quiz-subject-buttons {
+    flex-direction: column;
+  }
+
+  .quiz-subject-btn {
+    width: 100%;
+  }
+
+  .quiz-submit-button {
+    top: 5px;
+    right: 5px;
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+
+
+  
