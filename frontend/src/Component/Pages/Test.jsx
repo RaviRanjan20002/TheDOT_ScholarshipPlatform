@@ -145,7 +145,7 @@ import "../../Styles/Test.css";
 import axios from "axios";
 
 const Test = () => {
-  const [selectedSubject, setSelectedSubject] = useState(null);
+  const [selectedSubject, setSelectedSubject] = useState("physics");
   const [userAnswers, setUserAnswers] = useState({
     physics: {},
     chemistry: {},
