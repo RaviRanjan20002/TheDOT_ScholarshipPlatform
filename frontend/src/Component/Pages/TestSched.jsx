@@ -25,32 +25,34 @@ const TestSched = () => {
   };
 
   return (
-    <div className="test-sched-container">
-      <h2>Record Your Test</h2>
+    <div className="main-container">
+      <div className="test-sched-container">
+        <h2>Record Your Test</h2>
 
-      <div className="test-inputs">
-        <label>Test Date:</label>
-        <input
-          type="date"
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-          required
-        />
+        <div className="test-inputs">
+          <label>Test Date:</label>
+          <input
+            type="date"
+            value={date}
+            onChange={(e) => setDate(e.target.value)}
+            required
+          />
 
-        <label>Test Time:</label>
-        <input
-          type="time"
-          value={time}
-          onChange={(e) => setTime(e.target.value)}
-          required
-        />
+          <label>Test Time:</label>
+          <input
+            type="time"
+            value={time}
+            onChange={(e) => setTime(e.target.value)}
+            required
+          />
+        </div>
+
+        <p className="duration-text">Duration: 1 hour (60 minutes)</p>
+
+        <button className="begin-test-btn" onClick={handleSaveTestDetails}>
+          Save Test Details
+        </button>
       </div>
-
-      <p className="duration-text">Duration: 1 hour (60 minutes)</p>
-
-      <button className="begin-test-btn" onClick={handleSaveTestDetails}>
-        Save Test Details
-      </button>
     </div>
   );
 };

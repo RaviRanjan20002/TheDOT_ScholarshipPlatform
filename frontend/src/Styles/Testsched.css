@@ -1,6 +1,17 @@
+
+/* Full-page container */
+.main-container {
+  width: 100%;
+  height: 90vh;
+  background-color: #007bff; /* Blue background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Form container */
 .test-sched-container {
   width: 350px;
-  margin: 50px auto;
   padding: 20px;
   text-align: center;
   background: #f9f9f9;
