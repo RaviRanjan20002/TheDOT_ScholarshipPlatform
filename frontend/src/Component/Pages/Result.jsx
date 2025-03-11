@@ -26,7 +26,9 @@ const Result = () => {
       try {
         await Promise.all(
           subjects.map(async (subject) => {
-            const response = await axios.get(`https://thedot-scholarshipplatform.onrender.com/api/questions/${subject}`);
+            const response = await axios.get(
+              `https://thedot-scholarshipplatform.onrender.com/api/questions/${subject}`
+            );
             const questions = response.data;
 
             newTotalQuestions[subject] = questions.length;
@@ -59,7 +61,17 @@ const Result = () => {
       <div className="emoji">🎉</div>
       <h1>Congratulations!</h1>
       <p className="institute-tagline">You are among the top 100 students! 🎖️</p>
-      <p className="institute-info">Get scholarships & exclusive benefits for admission at <b>The DOT Institute</b>.</p>
+
+      {/* Fixed the conditional scholarship percentage message */}
+      {percentage >= 30 ? (
+        <p className="institute-info">
+          You have got <b>30%</b> Scholarship benefits for admission at <b>The DOT Institute</b>.
+        </p>
+      ) : (
+        <p className="institute-info">
+          You have got <b>{Math.floor(percentage)}%</b> Scholarship benefits for admission at <b>The DOT Institute</b>.
+        </p>
+      )}
 
       {loading ? (
         <p>Loading results...</p>
@@ -69,9 +81,13 @@ const Result = () => {
         <div className="score-container">
           {subjects.map((subject) => (
             <div className="subject-score-box" key={subject}>
-              <span className="subject-icon">{subject === "physics" ? "⚛️" : subject === "chemistry" ? "🧪" : "📐"}</span>
+              <span className="subject-icon">
+                {subject === "physics" ? "⚛️" : subject === "chemistry" ? "🧪" : "📐"}
+              </span>
               <p className="subject-name">{subject.charAt(0).toUpperCase() + subject.slice(1)}</p>
-              <span className="score-box">{scores[subject] || 0} / {totalQuestions[subject] || 0}</span>
+              <span className="score-box">
+                {scores[subject] || 0} / {totalQuestions[subject] || 0}
+              </span>
             </div>
           ))}
         </div>
@@ -90,5 +106,6 @@ const Result = () => {
 };
 
 export default Result;
+
 
 
