@@ -1,0 +1,79 @@
+.flip-clock {
+    text-align: center;
+    background-color: #1e2a38;
+    padding: 10px;
+    border-radius: 10px;
+    max-width: 200px;
+    max-height: 100px;
+    margin: auto;
+    position: absolute;
+    top: 0px;
+    left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  .clock-title {
+    color: #a0aec0;
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+  }
+  
+  .clock-container {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+  }
+  
+  .clock-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .flip-card {
+    width: 55px;
+    height: 30px;
+    background: #18a383;
+    border-radius: 6px;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .clock-label {
+    margin-top: 4px;
+    font-size: 10px;
+    color: #a0aec0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  /* 📱 Responsive Design */
+  @media (max-width: 768px) {
+    .flip-clock {
+      position: relative;
+      left: auto;
+      top: auto;
+      max-width: 180px;
+      max-height: 90px;
+      margin-top: 10px;
+    }
+  
+    .flip-card {
+      width: 50px;
+      height: 35px;
+      font-size: 20px;
+    }
+
+    .clock-label {
+      font-size: 9px;
+    }
+  }

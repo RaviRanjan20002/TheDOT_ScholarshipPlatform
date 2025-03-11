@@ -2,7 +2,7 @@
 /* Full-page container */
 .main-container {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background-color: #007bff; /* Blue background */
   display: flex;
   align-items: center;

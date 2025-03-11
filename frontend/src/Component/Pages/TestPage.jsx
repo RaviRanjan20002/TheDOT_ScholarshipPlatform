@@ -39,6 +39,18 @@ const TestPage = ({
     onAnswerSelect(subject, questionId, selectedOption);
   };
 
+  const handleSaveAndNext = () => {
+    if (currentIndex < questions.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+
+  const handleSkip = () => {
+    if (currentIndex < questions.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+    }
+  };
+
   // ✅ **Overall progress calculation**
   const totalAnswered = Object.values(safeUserAnswers).reduce(
     (acc, sub) => acc + Object.keys(sub).length,
@@ -75,9 +87,12 @@ const TestPage = ({
               Previous
             </button>
           )}
+          <button onClick={handleSkip} className="skip-button">
+            Skip
+          </button>
           {currentIndex < questions.length - 1 && (
-            <button onClick={() => setCurrentIndex(currentIndex + 1)}>
-              Next
+            <button onClick={handleSaveAndNext} className="save-next-button">
+              Save & Next
             </button>
           )}
         </div>
@@ -97,7 +112,7 @@ const TestPage = ({
           </div>
         </div>
         <div className="subject-progress">
-          <p>Overall Completion:{completionPercentage}%</p>
+          <p>Overall Completion: {completionPercentage}%</p>
         </div>
         {/* ✅ Divider for separation */}
         <div className="divider"></div>

@@ -79,6 +79,36 @@
   background: #0056b3;
 }
 
+/* 📌 Skip & Save & Next Buttons Styling */
+.skip-button {
+  background: #ffc107;
+  color: #333;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.skip-button:hover {
+  background: #e0a800;
+}
+
+.save-next-button {
+  background: #28a745;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.save-next-button:hover {
+  background: #218838;
+}
+
+
 /* 🏆 Side Panel */
 .side-panel {
   width: 25%;
