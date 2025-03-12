@@ -33,8 +33,8 @@ const Login = () => {
           <div className="login-right">
             <h2>Login to your dashboard</h2>
             <form className="login-form" onSubmit={handleSubmit}>
-              <label>Full Name</label>
-              <input type="text" placeholder="Enter your roll number" required />
+              <label>Name</label>
+              <input type="text" placeholder="Enter your full Name" required />
 
               <label>Address</label>
               <input type="text" required />

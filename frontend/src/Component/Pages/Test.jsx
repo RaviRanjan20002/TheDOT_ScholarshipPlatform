@@ -62,7 +62,15 @@ const Test = () => {
   const handleSubmit = () => {
     navigate("/results", { state: { userAnswers } });
   };
-
+  const handleAddSampleQuestions = async () => {
+    try {
+      await axios.post("https://thedot-scholarshipplatform.onrender.com/api/questions/add-sample");
+      alert("Sample questions added successfully!");
+    } catch (error) {
+      console.error("❌ Error adding sample questions:", error);
+      alert("Failed to add sample questions");
+    }
+  };
   return (
     <>
       <div className="quiz-container">
@@ -80,12 +88,17 @@ const Test = () => {
           </button>
         </div>
 
+        
+
         {/* ⏳ New Timer Design */}
         <FlipClockTimer />
 
         <button className="quiz-submit-button" onClick={handleSubmit} disabled={Object.keys(userAnswers).length === 0}>
           Submit Test
         </button>
+        <button className="quiz-add-button" onClick={handleAddSampleQuestions}>
+          ➕ Add Sample Questions
+        </button>
       </div>
 
       {selectedSubject && (

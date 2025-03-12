@@ -69,14 +69,14 @@
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  background: #007bff;
+  background: #344960;
   color: white;
   cursor: pointer;
   font-size: 16px;
 }
 
 .navigation-buttons button:hover {
-  background: #0056b3;
+  background: #1e2a38;
 }
 
 /* 📌 Skip & Save & Next Buttons Styling */
@@ -117,6 +117,11 @@
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  
+}
+
+.side-panel h3{
+  margin:0%
 }
 
 /* ✅ Answered & Not Answered Boxes */
